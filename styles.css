@@ -1,8 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600');
 .center {
   text-align: center;
   margin: auto;
 }
-
+header {
+  background-image: url("assets/background.jpg");
+  background-size: cover;
+}
+.fadeInLeftBig {
+  animation-timing-function: ease-in-out;
+}
+.homepage-hero-module {
+    border-right: none;
+    border-left: none;
+    position: relative;
+}
+.no-video .video-container video,
+.touch .video-container video {
+    display: none;
+}
+.no-video .video-container .poster,
+.touch .video-container .poster {
+    display: block !important;
+}
+.video-container {
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+}
+.video-container .poster img {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+.video-container .filter {
+    z-index: 100;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+.video-container video {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+}
+.video-container video.fillWidth {
+    width: 100%;
+}
 header, footer {
   background-color: #82bef5;
   color: #fff;
@@ -10,12 +58,12 @@ header, footer {
 
 main {
   width: 71%;
-  background-color: #F6CE30;
+  background-color: #f6f8f9;
   float: right;
 }
 
 aside {
-  background-color: #466C88;
+  background-color: #82bef5;
   width: 20%;
   float: left;
 }
@@ -27,11 +75,13 @@ aside ul {
 
 aside ul li a {
   font-size: 28px;
-  color: #F6CE30;
+  color: #31312f;
   cursor: pointer;
 }
 
 .profile-picture {
+  background-image: url("assets/sophy.jpg");
+  background-size: cover;
   width: 150px;
   height: 150px;
   padding: 1%;
@@ -40,27 +90,33 @@ aside ul li a {
 }
 
 h1, h2, aside ul li {
-  font-family: 'Bungee', serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 header h1 {
   margin: 0;
   font-size: 50px;
-  color: #fff;
+  color: #f9f8f1;
 }
-
+.text-shadow{
+  filter:drop-shadow(0px 0px 20px black);
+}
 header p {
   margin: 0;
   font-size: 21px;
 }
+  .text-shadow{
+    filter:drop-shadow(0px 0px 30px black);
+}
 
 main h2 {
-  color: #466C88;
+  color: ##171f3b;
 }
 
 p, ul {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+  color: #222;
 }
 
 #social-media img {
@@ -70,18 +126,18 @@ p, ul {
 
 /* Stretch - Call to Action Button */
 .action-button {
-  background-color: #466C88;
+  background-color: #2e85c5;
   color: #F6CE30;
   padding: 10px;
   margin-top: 1.5%;
   border-radius: 4px;
-  font-family: 'Bungee', serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 21px;
   display: inline-block;
 }
 
 .container {
-  background-color: #466C88;
+  background-color: #82bef5;
   overflow: hidden;
 }
 
@@ -107,9 +163,21 @@ a {
 
 /* Stretch - highlight span */
 .highlight {
-  color: #D35251;
+  color: #ecb203;
 }
-
+.fa-circle{
+  color: #000000;
+}
+.fa-stack-1x{
+  color:white;
+}
+.fa-stack{
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+.fa-stack:hover{
+  opacity: 1;
+}
 /* Strech - make it responsive */
 @media  all and (max-width:850px) {
   main, aside {
